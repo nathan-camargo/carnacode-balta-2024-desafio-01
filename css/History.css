@@ -1,0 +1,153 @@
+/* Estilos básicos e reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+/* Container principal */
+.container {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-logo {
+    width: 6.5rem;
+    padding: 18px;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.image-container {
+    border-radius: 25px;
+    display: inline-block;
+    overflow: hidden;
+    border: 3px solid #45FEFE;
+}
+
+/* Cabeçalho */
+header h1 {
+    color: #333;
+    font-weight: 780;
+    margin: 20px 0 20px;
+}
+
+.search-container {
+    width: 100%;
+}
+
+/* Barra de pesquisa */
+.search-container input[type=search] {
+    width: 100%;
+    padding: 18px 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: #e6e6e6;
+    margin-bottom: 20px;
+    font-size: 17px;
+    color: #333;
+    opacity: 0.8;
+    box-sizing: border-box;
+}
+
+/* Placeholder da barra de pesquisa */
+.search-container input::placeholder {
+    color: #333;
+    opacity: 1;
+}
+
+/* Lista de histórico */
+.history-list {
+    width: 100%;
+    list-style: none;
+}
+
+.history-item {
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.history-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.history-content::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 3.2px solid #e6e6e6;
+}
+
+.history-status,
+.history-time,
+.history-date,
+.history-item p {
+    margin: 0;
+}
+
+/* Status do histórico */
+.history-status {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+/* Tempo ou data do histórico */
+.history-time,
+.history-date {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    font-size: 14px;
+    color: #999999;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
+
+/* Texto do histórico */
+.history-item p {
+    color: #666;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.history-image {
+    width: 50px;
+    height: 50px;
+    align-self: center;
+}
+
+.history-item:not(:last-child) .history-content::after {
+    border-bottom: 3.2px solid #e6e6e6;
+    /* Estilo da linha divisória */
+}
